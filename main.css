@@ -1,0 +1,586 @@
+/* Estilos globales */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+}
+h2{
+    margin: 15px 0;
+}
+.show{
+    position: relative;
+}
+section{
+    width: 100vw;
+}
+/* Animaciones */
+@keyframes show {
+    from{
+        top:100px;
+        opacity: 0;
+    }to{
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes navExpand {
+    from{
+        height: 30px;
+    }to{
+        height: 200px;
+    }
+}
+@keyframes navCollapse {
+    from{
+        height: 200px;
+    }to{
+        height: 30px;
+    }
+}
+@keyframes showLi {
+    from{
+        opacity: 0;
+        left:-50px;
+    }to{
+        opacity: 1;
+        left:0;
+    }
+}
+@keyframes liMarkers {
+    0%{
+        color:#ffffff;
+    }
+    100%{
+        color: #000;
+    }
+}
+@keyframes typewriter {
+    from{
+        width: 0;
+    }
+    33%{
+        width:33%;
+    }66%{
+        width: 100%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes typewriterBlink {
+    from{
+        border-color: #fff;
+    }to{
+        border-color: transparent;
+    }
+}
+@keyframes colorChange {
+    0%{
+        color:#ffffff;
+    }50%{
+        color: #ec9511;
+    }
+    80%{
+        color: #ec9511;
+    }
+    100%{
+        color: #ffffff;
+    }
+    
+}
+@keyframes blink {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+@keyframes titleShow{
+    from{
+        height: 0px;
+    }to{
+        height: 70px;
+    }
+}
+@keyframes titleClose{
+    from{
+        height: 70px;
+    }to{
+        height: 0;
+    }
+}
+@keyframes slider {
+    0%{
+        transform: translateY(50px);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(0);
+    }
+    66%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* Estilos del home*/
+body::-webkit-scrollbar{
+    display: none;
+}
+#home{
+    color:#ffffff;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./resources/fondo2.jpg");
+    background-color: black;
+    background-size:cover;
+}
+.layer{
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+}
+.nav{
+    width: calc(100vw - 20px);
+    position: fixed;
+    z-index: 100;
+    background-color:  rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    padding:10px;
+    display: flex;
+    color:#ffffff;
+    border-bottom: 1px solid #333;
+    justify-content: space-between;
+}
+h1{ 
+    text-shadow: 0 0 3px #000;
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium';
+    line-height: 30px;
+    font-size: 20px;
+    animation: 3s colorChange linear infinite;
+}
+h1 span{
+    text-shadow: 0 0 3px #000;
+    color: #ffffff;
+}
+.collapsed-menu-btn{
+    background-image: url("./resources/logos/collapsedMenuLogo.png");
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+}
+.menu-ul{
+    display: none;
+    top:60px;
+    left: 50px;
+    position: absolute;
+}
+.menu-ul li{
+    opacity: 0;
+    position: relative;
+    text-shadow: 0 0 5px #000;
+    left: 0;
+    margin-bottom: 20px;
+}
+.li::marker{
+    animation: 0.5s liMarkers linear infinite;
+}
+.menu-ul a{
+    text-decoration: none;
+    color: #fff;
+}
+.homePresentation{
+    position: relative;
+    z-index: 2;
+    user-select: none;
+    margin-top: 150px;
+    text-align: center;
+    align-self: center;
+    text-shadow: 0 0 8px rgb(0,0,0);
+}
+.homePresentation label{
+    font-size: 2.5rem;
+}
+.description{
+    text-shadow: 0 0 3px rgb(0,0,0);
+    position: relative;
+    left: 20px;
+    text-align: right;
+}
+.description span{
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 900;
+}
+.description h4{
+    position: relative;
+    border-right: 2px solid #fff;
+    top:4px;
+    font-family:'Franklin Gothic Medium';
+    line-height: 20px;
+    color: #ec9511;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 3s typewriter forwards infinite,
+               0.3s typewriterBlink linear infinite;
+    animation-timing-function: steps(15);
+    max-width: 130px;
+}
+.sellingDescriptionContainer ul{
+    display: block;
+    height: 0;
+    font-size: 15px;
+    overflow: hidden;
+    padding-left: 15px;
+}
+.sellingDescriptionContainer li{
+    margin: 5px 0; 
+}
+.sellingDescriptionContainer{
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    margin: 120px 0 0 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+.sellingDescriptionContainer div{
+    margin-bottom: 5px;
+}
+.sellingDescriptionContainer h4{
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.sellingDescriptionContainer div:nth-child(2){
+    margin-left: 30px;
+}
+.sellingDescriptionContainer div:nth-child(3){
+    margin-left: 60px;
+}
+.sellingDescriptionContainer span{
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    width:20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #ec9511;
+}
+.sliderLabel{
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 80px;
+    color: #bbb;
+}
+.slider{
+    display: flex;
+    flex-flow: column;
+    height: 70px;
+    width:10%;
+    position: absolute;
+    align-self: center;   
+    bottom: 0;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.circle{
+    position: absolute;
+    transform: translateY(50px);
+    width:20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #ddd;
+    animation: 2s slider backwards infinite;
+}
+/* Estilos para seccion sobre mi */
+#aboutMe{
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+#aboutMe h2{
+    font-family:'Franklin Gothic Medium';
+    font-size: 40px;
+    font-weight: 800;
+    color:#1813b3;
+}
+#aboutMe h2 span{
+    font-family:'Franklin Gothic Medium';
+    font-size: 40px;
+}
+.aboutMe-miImg{
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px 0 5px;
+    border-radius: 50%;
+}
+.aboutMe-description{
+    display: flex;
+    flex-flow: column;
+    padding: 10px 20px;
+}
+.aboutMe-description span{
+    font-family:'Franklin Gothic Medium';
+    font-weight: 700;
+    color:#ec9511;
+}
+.aboutMe-description p{
+    text-align: center;
+    max-width: 450px;
+    padding: 0 20px;
+}
+#aboutMe h4 {
+    font-family:'Franklin Gothic Medium';
+    font-size: 20px;
+    color: #1813b3 ;
+}
+.tecnologias-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-width: 300px;
+    max-width: 450px;
+    height: 40px;
+    margin: 10px 0 20px;
+}
+.tecnologias-container img{
+    width: 40px;
+}
+/* Estilos para seccion proyectos */
+#projects{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: black;
+}
+#projects h2 {
+    font-family:'Franklin Gothic Medium';
+    font-size: 40px;
+    color: #ec9511;
+}
+.project-container{
+    display: flex;
+    flex-flow: column;
+}
+.project-container h3{
+    font-size: 25px;
+    margin: 10px 0 0;
+    align-self: center;
+    color: #ddd;
+}
+.projectImg{
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.tecnologies{
+    height: 25px;
+    display: flex;
+    justify-content: center;
+}
+.tecnologies img{
+    width: 25px;
+}
+.projectDescription{
+    display: flex;
+    flex-flow: column;
+    padding: 10px 20px;
+    color:#bbb;
+}
+.projectDescription p{
+    font-size: 14px;
+    text-align: center;
+    max-width: 450px;
+    padding: 0 20px; 
+}
+.projectDescription span{
+    color: #ec9511;
+}
+.projectBtn-container{
+    display: flex;
+    width:80%;
+    margin:auto;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.projectBtn-container a{
+    color:#1813b3;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.projectBtn-container a:last-child{
+    padding: 5px 5px;
+    background: transparent;
+    border-radius: 15px;
+}
+.projectBtn-container a:first-child{
+    padding: 5px 5px;
+    color: #fff;
+    background: #ec9511;
+    border-radius: 15px;
+}
+/* Estilos para seccion Contactame */
+#contactMe{
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+#contactMe h2{
+    color: #ec9511;
+    font-family:'Franklin Gothic Medium';
+    font-size: 35px;
+}
+.contactForm{
+    max-width: 550px;
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.contactForm label{
+    align-self: flex-start;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.contactForm input{
+    height: 25px;
+}
+.contactForm textarea{
+    resize: none;
+    height: 100px;
+}
+.submitbtn{
+    border: none;
+    background-color: #ec9511;
+    color: #fff;
+    margin: 10px auto;
+    max-width: 150px;
+    width: 50%;
+    border-radius: 20px;
+}
+.submitbtn:hover{
+    background-color: #a16813;
+}
+textarea,input{
+    width: 100%;
+    max-width: 550px;
+    outline: none;
+}
+#contactMe h4{
+    margin-top: 20px;
+    font-family:'Franklin Gothic Medium';
+    font-size: 18px;
+    color: #1813b3 ;
+}
+.contactMe-others{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 450px;
+    height: 30px;
+    margin: 10px 0 20px;
+}
+.contactMe-others img{
+    margin: 0 10px;
+    width: 30px;
+}
+/* Estilo para el footer */
+.footer{
+    height: 80px;
+    background-color: #000;
+    color: #fff;
+}
+/* Estilos para desktop */
+@media only screen and (min-width:700px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .collapsed-menu-btn{
+        display: none;
+    }
+    .menu-ul{
+        display: inline-flex !important;
+        align-items: center;
+        position: static;
+    }
+    .nav li {
+        animation: none;
+        margin: 0 10px;
+        display: inline-block;
+        opacity: 1;
+    }
+    .nav li:last-child{
+        background: #ec9511;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+    .nav li a{
+        text-shadow: 0 0 3px #000;
+        color: #ddd;
+    }
+    .nav li a[href="#contactMe"]:last-child{
+        color: #fff;
+    }
+    .homePresentation{
+        margin-top: 170px;
+    }
+    .sellingDescriptionContainer{
+        margin: 130px auto;
+        position: relative;
+        z-index: 2;
+        align-self: flex-start;
+        width: 90vw;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    .sellingDescriptionContainer h4 {
+        font-family: 'Franklin Gothic Medium';
+        font-size: 20px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .sellingDescriptionContainer span{
+        display: inline-block;
+        background-color: #ec9511;
+        text-align: center;
+        line-height: 20px;
+        padding: 3px;
+        height: 20px;
+        width:20px;
+        border-radius: 50px;
+        margin-right: 5px;
+    }
+    .sellingDescriptionContainer ul{
+        display: block;
+        height: 100px;
+        padding-left: 0;
+        overflow: visible;
+    }
+    .sellingDescriptionContainer li{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .sellingDescriptionContainer b{
+        display: none;
+    }
+    .footer{
+        width: 100vw;
+    }
+}

@@ -1,0 +1,186 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.div-container{
+	display: flex;
+	flex-flow: column;
+	height: 500px;
+	width: 350px;
+	margin:50px auto;
+	background: #eee;
+	border-radius: 20px;
+	box-shadow: 0 0 10px 5px #bbb;
+}
+@media only screen and (max-width: 400px){
+	.div-container{
+		width: 300px;
+		margin:20px auto;
+	}
+}
+.btn{
+	font-size: 20px;
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 60px;
+	background: #fff;
+	border: none;
+}
+.areaTop{
+	flex-grow: 1;
+	text-align: center;
+}
+
+.textArea{
+	border-radius: 10px;
+	font-size: 30px;
+	text-align: right;
+	position: relative;
+	height: 70%;
+	top: -5px;
+	width: 90%;
+	border: none;
+	padding:0 10px;
+}
+.color{
+	color: #fff;
+}
+.color::placeholder{
+	color: #aaa;
+}
+.textArea::placeholder{
+	padding-right: 20px;
+	font-size: 50px;
+}
+.textArea:focus{
+	outline: none;
+}
+.btn-color{
+	background: #666;
+	margin: 10px;
+	float: right;
+	height: 40px;
+	width: 40px;
+	border: none;
+	border-radius: 50%;
+}
+.areaBot{
+	flex-grow: 2;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(4, 1fr);
+	margin: 10px;
+}
+
+.btn-igual{
+	color: #fff;
+	background: #68e;
+	border-radius: 8%;
+	grid-column: 4/5;
+	grid-row: 4/6;
+}
+
+.btn-punto{
+	grid-row: 5/6;
+	grid-column: 3/4;
+}
+.btn-0{
+	grid-row: 5/6;
+	grid-column: 2/3;
+}
+.btn-1{
+	grid-row: 4/5;
+	grid-column: 1/2;
+}
+.btn-2{
+	grid-row: 4/5;
+	grid-column: 2/3;
+}
+.btn-3{
+	grid-row: 4/5;
+	grid-column: 3/4;
+}
+.btn-4{
+	grid-row: 3/4 ;
+	grid-column: 1/2;
+}
+.btn-5{
+	grid-row: 3/4 ;
+	grid-column: 2/3;
+}
+.btn-6{
+	grid-row: 3/4;
+	grid-column: 3/4;
+}
+.btn-7{
+	grid-row: 2/3;
+	grid-column: 1/2;
+}
+.btn-8{
+	grid-row: 2/3 ;
+	grid-column: 2/3;
+}
+.btn-9{
+	grid-row: 2/3;
+	grid-column: 3/4;
+}
+.btn-suma{
+	background: #6e8;
+	color: #fff;
+	grid-row: 3/4 ;
+	grid-column: 4/5;
+}
+.btn-resta{
+	background: #ee3;
+	color: #fff;
+	grid-row: 2/3;
+	grid-column: 4/5;
+}
+.label{
+	position: relative;
+	top: -8px;
+}
+.btn-multiplicacion{
+	background: #a6a;
+	color: #fff;
+	grid-row: 1/2;
+	grid-column: 4/5;
+}
+.btn-division{
+	background: #3bb;
+	color: #fff;
+	grid-row: 1/2;
+	grid-column: 3/4;
+}
+.btn-division label{
+	position: relative;
+}
+.btn-division .label2{
+	top: -8px;
+}
+.btn-division .label1{
+	top: -9px;
+	left: 13px;
+}
+.btn-division .label3{
+	top: 1.5px;
+	left: -14.5px;
+}
+.btn-borrar{
+	background: #e66;
+	color: #fff;
+	grid-row: 1/2;
+	grid-column: 2/3;
+}
+.btn-avanzado{
+	background: #e66;
+	color: #fff;
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 60px;
+}
+.btn-ac{
+	color: #fff;
+	background: #e66;
+}
