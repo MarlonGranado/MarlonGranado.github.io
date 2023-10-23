@@ -136,17 +136,20 @@ body::-webkit-scrollbar{
     flex-flow: column;
     height: 100vh;
     width: 100vw;
-    background-image: url("./resources/fondo2.jpg");
-    background-color: black;
-    background-size:cover;
 }
 .layer{
-    position: absolute;
-    z-index: 0;
+    position: fixed;
+    z-index: -10;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.7);
+    background-image: url("./resources/fondo2.jpg");
+    background-size:cover;
 }
+.layer div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}   
 .nav{
     width: calc(100vw - 20px);
     position: fixed;
@@ -501,7 +504,8 @@ textarea,input{
 }
 /* Estilo para el footer */
 .footer{
-    height: 80px;
+    padding: 20px;
+    text-align: center;
     background-color: #000;
     color: #fff;
 }
