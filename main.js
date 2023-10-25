@@ -151,8 +151,8 @@ addEventListener("resize",function(){
 document.getElementById("facebook").addEventListener("click",e=>{
     location.href="http://www.facebook.com/profile.php?id=100023293604074";
 })
-document.getElementById("instagram").addEventListener("click",e=>{
-    location.href="http://instagram.com/soymarlongh";
+document.getElementById("github").addEventListener("click",e=>{
+    location.href="https://github.com/MarlonGranado";
 })
 document.getElementById("linkedin").addEventListener("click",e=>{
     location.href="http://www.linkedin.com/";
