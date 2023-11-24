@@ -155,7 +155,7 @@ document.getElementById("github").addEventListener("click",e=>{
     location.href="https://github.com/MarlonGranado";
 })
 document.getElementById("linkedin").addEventListener("click",e=>{
-    location.href="http://www.linkedin.com/";
+    location.href="https://www.linkedin.com/in/marlon-granado-1b4581296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
 })
 
 

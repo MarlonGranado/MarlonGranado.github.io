@@ -460,6 +460,7 @@ h1 span{
     font-size: 14px;
 }
 .contactForm input{
+    padding-left: 5px;
     height: 25px;
 }
 .contactForm textarea{
@@ -499,6 +500,7 @@ textarea,input{
     margin: 10px 0 20px;
 }
 .contactMe-others img{
+    cursor:pointer;
     margin: 0 10px;
     width: 30px;
 }
