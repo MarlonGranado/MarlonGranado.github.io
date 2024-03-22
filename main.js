@@ -11,19 +11,17 @@ setInterval(()=>{
 },6000);
 
 //Cartel de inicio
-let actualPath = window.location.pathname;
 let fileName = document.title;
 let changer=[];
 const descriptionChanger = document.getElementById("mainDescriptionChanger");
-console.log(fileName)
 
-if(fileName=="en.html"){
+if(fileName=="Portfolio"){
     changer = [
         ["Web Developer","107px"],
         ["Web Designer","100px"]
     ];
     descriptionChanger.style.maxWidth="107px";
-}else if(fileName=="index.html"){
+}else if(fileName=="Portafolio"){
     changer = [
         ["Desarrollador Web","130px"],
         ["Diseñador Web","107px"]
