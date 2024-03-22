@@ -10,7 +10,7 @@ setInterval(()=>{
     document.querySelector(".circle").removeAttribute("hidden");
 },6000);
 //Cartel de inicio
-const changer =[
+let changer = [
     ["Desarrollador Web","130px"],
     ["Diseñador Web","107px"]
 ];
@@ -141,7 +141,21 @@ addEventListener("resize",function(){
     }
 })
 
+//Lang change
+let langBtn = document.querySelector(".langBtn");
 
+langBtn.onclick=(e)=>{
+     // Actual page
+    var actualPath = window.location.pathname;
+    var fileName = actualPath.substring(actualPath.lastIndexOf("/") + 1);
+
+    if(fileName=="en.html"){
+        location.href="index.html";
+    }else{
+        location.href="en.html";
+    } 
+
+}
    
 
 
@@ -151,11 +165,11 @@ addEventListener("resize",function(){
 document.getElementById("facebook").addEventListener("click",e=>{
     location.href="http://www.facebook.com/profile.php?id=100023293604074";
 })
-document.getElementById("github").addEventListener("click",e=>{
-    location.href="https://github.com/MarlonGranado";
+document.getElementById("instagram").addEventListener("click",e=>{
+    location.href="http://instagram.com/soymarlongh";
 })
 document.getElementById("linkedin").addEventListener("click",e=>{
-    location.href="https://www.linkedin.com/in/marlon-granado-1b4581296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+    location.href="http://www.linkedin.com/";
 })
 
 
