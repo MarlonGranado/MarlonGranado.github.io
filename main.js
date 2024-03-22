@@ -13,7 +13,7 @@ setInterval(()=>{
 //Cartel de inicio
 let actualPath = window.location.pathname;
 let fileName = document.title;
-let changer;
+let changer=[];
 const descriptionChanger = document.getElementById("mainDescriptionChanger");
 console.log(fileName)
 
