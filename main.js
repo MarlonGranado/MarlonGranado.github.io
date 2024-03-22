@@ -10,12 +10,26 @@ setInterval(()=>{
     document.querySelector(".circle").removeAttribute("hidden");
 },6000);
 //Cartel de inicio
-let changer = [
-    ["Desarrollador Web","130px"],
-    ["Diseñador Web","107px"]
-];
-let cont=1;
+let actualPath = window.location.pathname;
+let fileName = actualPath.substring(actualPath.lastIndexOf("/") + 1);
+let changer=[];
 const descriptionChanger = document.getElementById("mainDescriptionChanger");
+
+if(fileName=="en.html"){
+    changer = [
+        ["Web Developer","107px"],
+        ["Web Designer","100px"]
+    ];
+    descriptionChanger.style.maxWidth="107px";
+}else{
+    changer = [
+        ["Desarrollador Web","130px"],
+        ["Diseñador Web","107px"]
+    ];
+    descriptionChanger.style.maxWidth="130px";
+}
+
+let cont=1;
 
 setInterval(()=>{
     if(cont>changer.length-1)cont=0;
@@ -146,9 +160,7 @@ let langBtn = document.querySelector(".langBtn");
 
 langBtn.onclick=(e)=>{
      // Actual page
-    var actualPath = window.location.pathname;
-    var fileName = actualPath.substring(actualPath.lastIndexOf("/") + 1);
-
+ 
     if(fileName=="en.html"){
         location.href="index.html";
     }else{
@@ -156,11 +168,7 @@ langBtn.onclick=(e)=>{
     } 
 
 }
-   
-
-
-
-
+ 
 //Redirecciones a mis redes
 document.getElementById("facebook").addEventListener("click",e=>{
     location.href="http://www.facebook.com/profile.php?id=100023293604074";

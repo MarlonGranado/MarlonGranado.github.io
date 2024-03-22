@@ -246,7 +246,7 @@ h1 span{
     animation: 3s typewriter forwards infinite,
                0.3s typewriterBlink linear infinite;
     animation-timing-function: steps(15);
-    max-width: 130px;
+    /* max-width: 130px; */
 }
 .sellingDescriptionContainer ul{
     display: block;
