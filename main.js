@@ -21,7 +21,7 @@ if(fileName=="en.html"){
         ["Web Designer","100px"]
     ];
     descriptionChanger.style.maxWidth="107px";
-}else{
+}else if(fileName=="index.html"){
     changer = [
         ["Desarrollador Web","130px"],
         ["Diseñador Web","107px"]
